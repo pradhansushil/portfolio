@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code. Build. Ship</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <ul class="nav-menu">
+          <li><a href="#welcome-section" class="nav-link">About Me</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact-form" class="nav-link">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="hero-title">Sushil | Frontend Web Developer</h1>
+        <p class="hero-tagline">Code. Build. Ship</p>
+        <a href="#projects" class="projects-btn">See my work</a>
+      </section>
+
+      <section id="welcome-section">
+        <h1 class="section-title">About Me</h1>
+          
+        <p class="about-text">Welcome to my portfolio! I'm Sushil Pradhan, an aspiring Frontend Web Developer.</p>
+
+        <p class="about-text">I focus on writing clean, maintainable, and scalable code. I believe minimal design is the best approach — it keeps things clear and lets the product speak for itself, rather than relying on flashy visuals.</p>
+
+        <p class="about-text">I'm currently seeking a junior frontend developer role at a company where I can grow, contribute, and continue learning. I'm also open to freelance projects to gain more hands-on experience in real-world environments.</p>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>        
+        <div class="skills">
+          <div class="soft">
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Collaborative Problem-Solving</li>
+              <li>Empathy</li>
+              <li>Attention to Detail</li>
+              <li>Curiosity & Growth Mindset</li>
+            </ul>
+          </div>
+
+          <div class="technical">
+            <h3>Technical Skills</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Responsive Design</li>
+              <li>Writing Clean, Maintainable Code</li>
+              <li>Creating Scalable Websites</li>
+              <li>Basic Git & Version Control</li>
+              <li>Currently Learning JavaScript</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-tile">
+          <div class="project-content">
+            <h3>Product Landing Page</h3>
+            <img src="/images/Screenshot 2025-06-18 at 17-44-50 ARCYN - Product Landing Page.png" alt="an image of a product landing page that's selling a pair of basketball shoes called ARCYN RE1GNS" />
+            <p class="description">A product landing page to sell my basketball brand shoes, ARCYN RE1GNS (not real).</p>
+            
+            <p class="description">
+              <strong>Tech used:</strong>
+            </p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Microsoft Copilot</li>
+              <li>PICTORY.AI</li>
+              <li>ChatGPT</li>
+            </ul>
+            <a href="https://github.com/pradhansushil/product-landing-page"
+               target="_blank"
+               rel="noopener noreferrer"
+               id="profile-link">
+              View on GitHub
+            </a>
+
+            <a href="#">More Info</a>
+          </div>
+
+          <div class="project-content coming-soon">
+            <h3>Coming Soon</h3>
+            <p>More projects are on the way. Stay tuned!</p>
+          </div>
+
+          <div class="project-content coming-soon">
+            <h3>Coming Soon</h3>
+            <p>More projects are on the way. Stay tuned!</p>
+          </div>
+
+          <div class="project-content coming-soon">
+            <h3>Coming Soon</h3>
+            <p>More projects are on the way. Stay tuned!</p>
+          </div>
+
+          <div class="project-content coming-soon">
+            <h3>Coming Soon</h3>
+            <p>More projects are on the way. Stay tuned!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-form">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="form-container">
+          <form action="https://formspree.io/f/xblykzvn" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required/>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required/>
+
+            <label for="message">Message:</label>
+            <textarea id="message"
+                      name="message"
+                      cols="30"
+                      rows="5"
+                      required>
+            </textarea>
+            <button type="submit">Contact Me</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+Problem 1: The CTA button wouldn't shift downward as expected.
+
+Attempts:
+- Applied `padding-bottom` to the `.hero` section.
+- Tried moving the same padding to the `header` selector.
+- Converted `.hero` into a flex container. This resolved the issue, 
+  but I didn’t understand why. I assumed that if it works with flexbox, it should be possible to achieve the same result without using it.
+- Asked ChatGPT for clarification.
+- Realized that `<a>` is an inline element by default, so margins and 
+  paddings don’t behave as expected unless it’s changed to `block` or `inline-block`.
+
+Fix:
+- Applied `display: inline-block` to the CTA to retain control over 
+  spacing without it occupying the full width.
+
+---
+
+Problem 2: The "About Me" section didn’t look right due to the default indentation of each paragraph.
+
+Fix:
+- Added `padding-bottom` between paragraphs to create clearer 
+  separation, similar to the formatting seen on blog-style websites.
+
+---
+
+Problem 3: The last `.project-tile` card appeared shorter than the others.
+
+Reason:
+- This is expected behavior with CSS Grid. Since only one card had 
+  substantial content, the next three visually aligned based on that height. However, the last (fifth) card wrapped to a new row and had no height reference, so it shrank to its content’s minimum height.
+
+Attempts:
+- Tried setting a fixed minimum height (`min-height: 300px`) on `.
+  project-content`, but it felt rigid.
+
+Fix:
+- Added `grid-auto-rows: 1fr` to `.project-tile`, ensuring that all 
+  cards in the grid have equal height, regardless of row wrapping or content length.
+
+---
+
+Problem 4: The hamburger toggle button wasn't hiding the navigation bar as expected on screens 480px wide.
+
+Attempts:
+
+  - Added !important to display: flex; inside #menu-toggle:checked + .
+    hamburger + .nav-menu {} to force it to override conflicting rules.
+
+  - Used DevTools to inspect .nav-menu behavior and determine what 
+    styles were being applied.
+
+Cause:
+  - The rule targeting .navbar ul in the @media (max-width: 1024px) 
+    block had higher specificity and was overriding the display: none; rule applied to .nav-menu for smaller screens.
+
+Fix:
+  - Updated all instances of .navbar ul to .nav-menu to maintain  
+    consistent class usage and avoid conflicts.
