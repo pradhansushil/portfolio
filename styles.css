@@ -126,6 +126,10 @@ header {
   max-width: var(--max-width);
 }
 
+.skills ul li {
+  line-height: 1.6;
+}
+
 /* Header within Container */
 h3 {
   margin-bottom: 0.5rem;
@@ -271,7 +275,8 @@ footer {
     font-size: 1.25rem;
   }
 
-  .about-text {
+  .about-text,
+  .skills ul li {
     line-height: 1.4;
   }
 
@@ -301,7 +306,8 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  .about-text {
+  .about-text,
+  .skills ul li {
     line-height: 1.5;
   }
   
