@@ -11,6 +11,7 @@
   --max-width: 50rem;
   --navbar-color1: #1b1b1b;
   --navbar-color2: #4CAF50;
+  --space-between-sentences: 1.6;
 }
 
 /* General */
@@ -108,7 +109,7 @@ header {
 .about-text {
   font-size: 1.125rem;
   letter-spacing: 0.02em;
-  line-height: 1.6;
+  line-height: var(--space-between-sentences);
   margin: 0 auto;
   max-width: var(--max-width);
   padding-bottom: 1rem;
@@ -127,7 +128,7 @@ header {
 }
 
 .skills ul li {
-  line-height: 1.6;
+  line-height: var(--space-between-sentences);
 }
 
 /* Header within Container */
@@ -164,6 +165,10 @@ h3 {
 
 .project-content ul {
   padding-left: 0.8125rem;
+}
+
+.project-content ul li {
+  line-height: var(--space-between-sentences);
 }
 
 .project-content a {
@@ -276,7 +281,8 @@ footer {
   }
 
   .about-text,
-  .skills ul li {
+  .skills ul li,
+  .project-content ul li {
     line-height: 1.4;
   }
 
@@ -307,7 +313,8 @@ footer {
 
 @media (max-width: 1024px) {
   .about-text,
-  .skills ul li {
+  .skills ul li,
+  .project-content ul li {
     line-height: 1.5;
   }
   
