@@ -32,7 +32,6 @@ Reason:
 Attempts:
 - Tried setting a fixed minimum height (`min-height: 300px`) on `.
   project-content`, but it felt rigid.
-
 Fix:
 - Added `grid-auto-rows: 1fr` to `.project-tile`, ensuring that all 
   cards in the grid have equal height, regardless of row wrapping or content length.
@@ -41,6 +40,10 @@ Fix:
 
 Problem 4: The hamburger toggle button wasn't hiding the navigation bar as expected on screens 480px wide.
 
+Reason:
+  - The rule targeting .navbar ul in the @media (max-width: 1024px) 
+    block had higher specificity and was overriding the display: none; rule applied to .nav-menu for smaller screens.
+
 Attempts:
 
   - Added !important to display: flex; inside #menu-toggle:checked + .
@@ -48,10 +51,6 @@ Attempts:
 
   - Used DevTools to inspect .nav-menu behavior and determine what 
     styles were being applied.
-
-Cause:
-  - The rule targeting .navbar ul in the @media (max-width: 1024px) 
-    block had higher specificity and was overriding the display: none; rule applied to .nav-menu for smaller screens.
 
 Fix:
   - Updated all instances of .navbar ul to .nav-menu to maintain  
