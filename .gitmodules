@@ -1,3 +1,6 @@
 [submodule "product-landing-page"]
 	path = product-landing-page
 	url = https://github.com/pradhansushil/product-landing-page.git
+[submodule "blog"]
+	path = blog
+	url = https://github.com/pradhansushil/blog.git
