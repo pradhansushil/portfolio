@@ -136,7 +136,7 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Product Landing Page */
+/* Projects */
 .project-tile {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
