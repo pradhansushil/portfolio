@@ -164,14 +164,38 @@ h3 {
   padding: 1rem;
 }
 
+/* Projects */
 .project-content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
-  border: 1px solid #444;
-  border-radius: 8px;
-  padding: 1rem;
+  /* Polished border container */
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+
+  /* Subtle depth */
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.25);
+
+  /* Smooth transitions */
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Hover effect for interactivity */
+.project-content:hover {
+  border-color: rgba(76, 175, 80, 0.4);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(76, 175, 80, 0.1),
+    0 0 0 1px rgba(76, 175, 80, 0.1);
+  transform: translateY(-2px);
 }
 
 .project-content img {
@@ -299,6 +323,11 @@ footer {
   .skills {
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .project-content {
+    padding: 1rem;
+    border-radius: 8px;
   }
 
   .project-content img {
