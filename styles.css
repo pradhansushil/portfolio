@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 55px;
+}
+
 :root {
   --body-color: #e0e0e0;
   --button-color: #fff;
