@@ -293,23 +293,30 @@ textarea {
 }
 
 .success-container {
-  border: 2px solid #38b2ac;
-  border-radius: 8px;
-  padding: 30px;
-  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+
+  padding: 4rem 1rem;
+  margin: 2rem auto;
+  max-width: var(--max-width);
   text-align: center;
 }
 
 .success-message h3 {
-  color: #234e52;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
+  color: #00ff41;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
 }
 
 .success-message p {
-  color: #2d3748;
-  font-size: 1.1rem;
-  line-height: 1.5;
+  color: var(--body-color);
+  font-size: 1.25rem;
+  line-height: var(--space-between-sentences);
+  max-width: 35rem;
+  margin: 0 auto;
 }
 
 footer {
