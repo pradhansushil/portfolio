@@ -1,6 +1,6 @@
 const contact = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
-const contactSection = document.getElementById("contactSection");
+const contactSection = document.getElementById("contact-form");
 const contactName = document.getElementById("name");
 const contactEmail = document.getElementById("email");
 const contactMessage = document.getElementById("message");
