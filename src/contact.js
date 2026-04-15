@@ -1,8 +1,6 @@
-console.log("contact.js loaded");
-
 const contact = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
-const formWrapper = document.getElementById("formWrapper");
+const contactSection = document.getElementById("contactSection");
 const contactName = document.getElementById("name");
 const contactEmail = document.getElementById("email");
 const contactMessage = document.getElementById("message");
@@ -69,11 +67,15 @@ function handleSubmit(event) {
     })
     .then(function (data) {
       if (data.ok) {
-        formWrapper.innerHTML =
-          "<h3>Email sent successfully!</h3><p>I've received your message and will get back to you as soon as possible.</p>";
+        contactSection.innerHTML = `
+          <div class="success-container">
+            <h3>Email sent successfully!</h3>
+            <p>I've received your message and will get back to you as soon as possible.</p>
+          </div>
+        `;
       } else {
         formMessage.textContent = "Something went wrong, please try again.";
-        formMessage.classList.add("error");
+        modifyClass("error", "add", formMessage);
       }
     });
 }

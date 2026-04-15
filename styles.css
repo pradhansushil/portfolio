@@ -292,6 +292,26 @@ textarea {
   padding: 0.75rem;
 }
 
+.success-container {
+  border: 2px solid #38b2ac;
+  border-radius: 8px;
+  padding: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.success-message h3 {
+  color: #234e52;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.success-message p {
+  color: #2d3748;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
 footer {
   background-color: #1b1b1b;
   color: var(--body-color);
