@@ -3,22 +3,59 @@ console.log("contact.js loaded");
 const contact = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 const formWrapper = document.getElementById("formWrapper");
+const contactName = document.getElementById("name");
+const contactEmail = document.getElementById("email");
+const contactMessage = document.getElementById("message");
+
+function modifyClass(className, action, ...elements) {
+  elements.forEach((element) => {
+    if (action === "add") {
+      element.classList.add(className);
+    } else {
+      element.classList.remove(className);
+    }
+  });
+}
+
+function clearErrors() {
+  modifyClass("error", "remove", formMessage);
+  modifyClass(
+    "input-error",
+    "remove",
+    contactName,
+    contactEmail,
+    contactMessage
+  );
+}
+
+function handleErrors() {
+  let hasError = false;
+
+  if (contactName.value.trim() === "") {
+    hasError = true;
+    modifyClass("input-error", "add", contactName);
+  }
+  if (contactEmail.value.trim() === "") {
+    hasError = true;
+    modifyClass("input-error", "add", contactEmail);
+  }
+  if (contactMessage.value.trim() === "") {
+    hasError = true;
+    modifyClass("input-error", "add", contactMessage);
+  }
+
+  if (hasError) {
+    formMessage.textContent = "All fields are required to be filled";
+    modifyClass("error", "add", formMessage);
+    return hasError;
+  }
+}
 
 function handleSubmit(event) {
-  console.log("handlesubmit fired.");
   event.preventDefault();
-  const contactName = document.getElementById("name").value;
-  const contactEmail = document.getElementById("email").value;
-  const contactMessage = document.getElementById("message").value;
-
-  if (
-    contactName.trim() === "" ||
-    contactEmail.trim() === "" ||
-    contactMessage.trim() === ""
-  ) {
-    formMessage.textContent = "All fields are required to be filled";
-    return;
-  }
+  formMessage.textContent = "";
+  clearErrors();
+  if (handleErrors()) return;
 
   fetch(contact.getAttribute("action"), {
     method: "POST",
@@ -36,6 +73,7 @@ function handleSubmit(event) {
           "<h3>Email sent successfully!</h3><p>I've received your message and will get back to you as soon as possible.</p>";
       } else {
         formMessage.textContent = "Something went wrong, please try again.";
+        formMessage.classList.add("error");
       }
     });
 }

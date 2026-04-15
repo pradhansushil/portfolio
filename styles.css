@@ -269,12 +269,22 @@ form {
   max-width: 18.75rem;
 }
 
+.error {
+  background-color: red;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
 input,
 textarea {
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
   padding: 0.5rem;
+}
+
+.input-error {
+  border: 1px solid red;
 }
 
 #contact-form button {
