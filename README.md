@@ -12,7 +12,7 @@ Originally my FreeCodeCamp HTML/CSS capstone, this portfolio has evolved into a 
 - [Site Architecture](#site-architecture)
 - [Tech Stack](#tech-stack)
 - [Developer Workflow & Standards](#developer-workflow--standards)
-- [Key Learnings](#key-learnings)
+- [Challenges & Solutions](#challenges--solutions)
 - [Installation](#installation)
 - [License](#license)
 
@@ -108,6 +108,26 @@ I utilized AI as a mentor to help me understand logic "under the hood" rather th
 ### Version Control
 
 I used Git throughout the entire development lifecycle and maintain a clean repository history by utilizing a `.gitignore` file.
+
+---
+
+## Challenges & Solutions
+
+### Hamburger Menu Not Closing on Mobile
+
+**Problem:** On screens around 480px wide, the navigation menu would open but never close. It stayed visible regardless of interaction.
+
+**Debug:** Using DevTools to inspect which styles were actually being applied revealed a specificity conflict — a `.navbar ul` rule inside a `@media (max-width: 1024px)` block was overriding the `display: none` meant to hide the menu on smaller screens.
+
+**Fix:** Replaced every instance of `.navbar ul` with `.nav-menu` so a single class was responsible for that element, eliminating the conflict entirely. The real lesson was learning to reach for DevTools first instead of guessing — specificity bugs are invisible until you see exactly which rule the browser is using.
+
+### Contact Form Textarea Had Invisible Content on Load
+
+**Problem:** Clicking into the message field placed the cursor in an indented position rather than the top-left corner. Backspacing removed something, but it returned on every page refresh.
+
+**Debug:** The refresh behavior was the key clue — if it came back every time, it wasn't a visual glitch, it was real content. The `<textarea>` element treats any whitespace between its opening and closing tags as actual text. The closing tag had been placed on a new line for readability, and the browser was reading that line break and indentation as the field's initial value.
+
+**Fix:** Collapsing both tags onto a single line with nothing between them resolved it immediately. What made this one stick was recognizing it looked like a styling problem but was actually a data problem — chasing it with CSS would have gone nowhere.
 
 ---
 
