@@ -71,6 +71,7 @@ This is a strictly static website. The browser loads `index.html`, applies `styl
 
 ### File Structure
 
+```text
 portfolio/
 ├── index.html # Main entry point
 ├── styles.css # Centralized styling logic
@@ -84,6 +85,7 @@ portfolio/
 │ └── the-sushil's-desk.png
 ├── .gitignore # Keeps dev notes out of the repo
 └── LICENSE.txt # Copyright notice
+```
 
 ---
 
