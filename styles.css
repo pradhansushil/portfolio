@@ -329,6 +329,15 @@ footer {
   font-size: 0.875rem;
 }
 
+footer > * {
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
 @media (max-width: 1024px) {
   #welcome-section,
   #skills {
