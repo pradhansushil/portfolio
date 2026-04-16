@@ -12,6 +12,7 @@ Originally my FreeCodeCamp HTML/CSS capstone, this portfolio has evolved into a 
 - [Site Architecture](#site-architecture)
 - [Tech Stack](#tech-stack)
 - [Developer Workflow & Standards](#developer-workflow--standards)
+- [Key Learnings](#key-learnings)
 - [Installation](#installation)
 - [License](#license)
 
@@ -31,6 +32,8 @@ Originally my FreeCodeCamp HTML/CSS capstone, this portfolio has evolved into a 
 - **Identity:** Features a prominent title: "Sushil | Web Developer".
 - **Typewriter Animation:** Engineered a "Code. Build. Ship." tagline effect using recursive `setTimeout` logic.
 - **Call to Action:** A "See my work" button that directs users to the project grid.
+
+![Typewriter animation cycling through "Code. Build. Ship." in the hero section](images/hero-animation.gif)
 
 ### About Me
 
