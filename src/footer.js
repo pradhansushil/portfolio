@@ -7,6 +7,6 @@ const footerElement = document.getElementById("footer");
 const githubLink = document.createElement("a");
 githubLink.href = "https://github.com/pradhansushil/";
 githubLink.target = "_blank";
-githubLink.textContent = "GitHub";
+githubLink.innerHTML = `<i class="fa-brands fa-github fa-xl"></i>`;
 githubLink.classList.add("footer-link");
 footerElement.appendChild(githubLink);
