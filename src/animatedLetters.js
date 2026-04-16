@@ -1,4 +1,7 @@
 const heroElement = document.querySelector(".hero-tagline");
+
+if (!heroElement) return;
+
 const textToAnimate = heroElement.textContent;
 
 function typeEffect(index) {
