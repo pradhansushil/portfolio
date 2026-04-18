@@ -410,8 +410,8 @@ footer > * {
   .nav-menu {
     display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    /* gap: 1rem; */
     margin-top: 1rem;
   }
 
@@ -422,15 +422,14 @@ footer > * {
   .nav-link {
     display: inline-block;
     background: transparent;
+    border: none;
     border-radius: 6px;
-    margin: 0 auto;
-    padding: 0.5rem 1.25rem;
-    text-align: center;
+    padding: 1rem 1.25rem;
   }
 
   .nav-link:hover {
-    background: var(--navbar-color2);
-    color: var(--navbar-color1);
+    background: transparent;
+    color: var(--navbar-color2);
   }
 
   .hero-title {
