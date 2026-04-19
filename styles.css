@@ -405,17 +405,23 @@ footer > * {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: transparent;
   }
 
   .hamburger {
     display: block;
+    background-color: var(--navbar-color1);
   }
 
   .nav-menu {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 1rem;
+    margin-top: 0;
+    width: fit-content;
+    background-color: var(--navbar-color1);
+    padding: 1rem 2.5rem;
+    /* border: 1px solid red; */
   }
 
   #menu-toggle:checked + .hamburger + .nav-menu {
