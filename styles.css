@@ -387,6 +387,10 @@ footer > * {
 }
 
 @media (max-width: 480px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+
   #welcome-section,
   #skills {
     padding: 0 1rem;
