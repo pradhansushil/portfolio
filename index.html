@@ -24,10 +24,18 @@
   <body>
     <header>
       <nav class="navbar">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <button
+          type="button"
+          id="menu-toggle"
+          class="hamburger"
+          aria-label="Open main menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          &#9776;
+        </button>
 
-        <ul class="nav-menu">
+        <ul id="nav-menu" class="nav-menu">
           <li><a href="#welcome-section" class="nav-link">About Me</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>

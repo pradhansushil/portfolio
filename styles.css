@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 55px;
@@ -15,6 +20,7 @@ html {
   --max-width: 50rem;
   --navbar-color1: #1b1b1b;
   --navbar-color2: #4caf50;
+  --accent-color: #00ff41;
   --space-between-sentences: 1.6;
 }
 
@@ -43,10 +49,6 @@ header {
     rgba(76, 175, 80, 0.35) 50%,
     transparent 100%
   );
-}
-
-#menu-toggle {
-  display: none;
 }
 
 .hamburger {
@@ -121,7 +123,7 @@ header {
   font-size: 1.625rem;
   font-style: normal;
   font-weight: 400;
-  color: #00ff41;
+  color: var(--accent-color);
 }
 
 .projects-btn {
@@ -303,8 +305,8 @@ textarea {
   text-align: center;
 }
 
-.success-message h3 {
-  color: #00ff41;
+.success-container h3 {
+  color: var(--accent-color);
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -424,7 +426,7 @@ footer > * {
     /* border: 1px solid red; */
   }
 
-  #menu-toggle:checked + .hamburger + .nav-menu {
+  .isOpen {
     display: flex;
   }
 
