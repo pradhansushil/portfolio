@@ -126,11 +126,36 @@ header {
   color: var(--accent-color);
 }
 
+.hero-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
 .projects-btn {
   display: inline-block;
-  margin-top: 1rem;
   padding: 0.5rem 1rem;
   text-decoration: none;
+}
+
+.blog-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: 2px solid var(--navbar-color2);
+  border-radius: 8px;
+  color: var(--navbar-color2);
+  font-size: 1rem;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.blog-btn:hover {
+  background: var(--navbar-color2);
+  color: #000;
 }
 
 #welcome-section,
@@ -445,6 +470,16 @@ footer > * {
 
   .hero-tagline {
     font-size: 1.25rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-btn {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.85rem;
   }
 
   .about-text,
