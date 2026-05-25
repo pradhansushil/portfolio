@@ -11,7 +11,7 @@ function animatedLetters() {
       setTimeout(() => {
         heroElement.textContent = "";
         typeEffect(0);
-      }, 3000);
+      }, 1500);
       return;
     }
 
