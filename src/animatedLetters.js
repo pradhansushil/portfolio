@@ -19,11 +19,11 @@ function animatedLetters() {
     heroElement.textContent = textToAnimate.slice(0, index + 1);
 
     // 3. THE LOGIC: Determine the delay
-    let delay = 300;
+    let delay = 60;
 
     // check if the current character is a period
     if (textToAnimate[index] === ".") {
-      delay += 150;
+      delay += 30;
     }
 
     // 4. THE RECURSION: Schedule the next character
