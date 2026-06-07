@@ -59,10 +59,23 @@ header {
 }
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background: var(--navbar-color1);
   border-bottom: 1px solid #333;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 1rem;
+}
+
+.nav-logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--navbar-color2);
+  text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
 .nav-menu {
