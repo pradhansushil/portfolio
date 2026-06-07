@@ -75,15 +75,15 @@ header {
 
 .nav-link {
   display: inline-block;
-  border: 2px solid var(--navbar-color2);
   color: var(--button-color);
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .nav-link:hover {
   background: var(--navbar-color2);
+  border-radius: 8px;
   color: var(--navbar-color1);
 }
 
