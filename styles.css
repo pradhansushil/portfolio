@@ -146,10 +146,16 @@ header {
 }
 
 .projects-btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+
   padding: 0.5rem 1rem;
   text-decoration: none;
 }
+
+/* .hero-ctas {
+  outline: 1px solid red;
+} */
 
 .blog-btn {
   display: inline-block;
