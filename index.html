@@ -299,6 +299,8 @@
     </footer>
 
     <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
       document.querySelectorAll(".project-content").forEach((card) => {
         card.addEventListener("click", (e) => {
           if (e.target.closest("a")) return;
