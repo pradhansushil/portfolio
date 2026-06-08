@@ -293,8 +293,9 @@ h3 {
 }
 
 .project-content img {
-  height: 14.0625rem;
+  height: 180px;
   object-fit: cover;
+  object-position: top;
   width: 100%;
 }
 
