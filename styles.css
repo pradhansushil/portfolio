@@ -293,10 +293,9 @@ h3 {
 }
 
 .project-content img {
-  height: auto;
-  max-width: 18.75rem;
+  height: 14.0625rem;
   object-fit: cover;
-  width: 85%;
+  width: 100%;
 }
 
 .project-content ul {
