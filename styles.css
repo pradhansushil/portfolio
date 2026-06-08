@@ -209,7 +209,6 @@ header {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin: 0.5rem 0 3rem;
 }
 
 .skill-group {
