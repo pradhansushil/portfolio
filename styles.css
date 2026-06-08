@@ -211,7 +211,11 @@ header {
   gap: 3rem;
 }
 
-.skill-group {
+.skill-group:first-child {
+  flex: 2;
+}
+
+.skill-group:last-child {
   flex: 1;
 }
 
