@@ -25,7 +25,7 @@
     <header>
       <nav class="navbar">
         <a href="#" class="nav-logo">&lt;SP /&gt;</a>
-        
+
         <button
           type="button"
           id="menu-toggle"
@@ -126,7 +126,10 @@
       <section id="projects">
         <h2 class="section-title">Projects</h2>
         <div class="project-tile">
-          <div class="project-content">
+          <div
+            class="project-content"
+            data-href="https://pradhansushil.github.io/blog/posts/my-first-ai-landing-page.html"
+          >
             <h3>Product Landing Page</h3>
             <img
               src="images/product-landing-page.png"
@@ -136,7 +139,6 @@
               A product landing page to sell my basketball brand shoes, ARCYN
               RE1GNS (not real).
             </p>
-
             <p class="description">
               <strong>Tech used:</strong>
             </p>
@@ -148,33 +150,28 @@
               <li>ChatGPT</li>
               <li>Git & GitHub</li>
             </ul>
-            <a
-              href="https://pradhansushil.github.io/product-landing-page/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="profile-link"
-            >
-              View Live
-            </a>
-
-            <a
-              href="https://github.com/pradhansushil/product-landing-page"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://pradhansushil.github.io/blog/work/my-first-ai-landing-page.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              More Info
-            </a>
+            <div class="project-links">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="profile-link"
+                >View Live</a
+              >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="profile-link"
+                >GitHub</a
+              >
+            </div>
           </div>
 
-          <div class="project-content">
+          <div
+            class="project-content"
+            data-href="https://pradhansushil.github.io/blog/posts/building-my-blog.html"
+          >
             <h3>Blog</h3>
             <img
               src="images/the-sushil's-desk.png"
@@ -184,7 +181,6 @@
               My personal blog that goes through my thought process- how I
               solved problems, things I learned, etc.
             </p>
-
             <p class="description">
               <strong>Tech used:</strong>
             </p>
@@ -194,33 +190,28 @@
               <li>ChatGPT</li>
               <li>Git & GitHub</li>
             </ul>
-            <a
-              href="https://pradhansushil.github.io/blog/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="profile-link"
-            >
-              View Live
-            </a>
-
-            <a
-              href="https://github.com/pradhansushil/blog"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://pradhansushil.github.io/blog/work/building-my-blog.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              More Info
-            </a>
+            <div class="project-links">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="profile-link"
+                >View Live</a
+              >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="profile-link"
+                >GitHub</a
+              >
+            </div>
           </div>
 
-          <div class="project-content">
+          <div
+            class="project-content"
+            data-href="https://pradhansushil.github.io/blog/posts/pump-and-iron.html"
+          >
             <h3>Pump & Iron</h3>
             <img
               src="images/pump-iron.gif"
@@ -232,7 +223,6 @@
               membership; admins get a full dashboard to manage members,
               employees, and payments.
             </p>
-
             <p class="description">
               <strong>Tech used:</strong>
             </p>
@@ -244,30 +234,22 @@
               <li>React Router v6</li>
               <li>Claude</li>
             </ul>
-            <a
-              href="https://pump-iron.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="profile-link"
-            >
-              View Live
-            </a>
-
-            <a
-              href="https://github.com/pradhansushil/pump-iron"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://pradhansushil.github.io/blog/work/pump-and-iron.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              More Info
-            </a>
+            <div class="project-links">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="profile-link"
+                >View Live</a
+              >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="profile-link"
+                >GitHub</a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -316,6 +298,14 @@
       </p>
     </footer>
 
+    <script>
+      document.querySelectorAll(".project-content").forEach((card) => {
+        card.addEventListener("click", (e) => {
+          if (e.target.closest("a")) return;
+          window.open(card.dataset.href, "_blank");
+        });
+      });
+    </script>
     <script src="src/footer.js"></script>
     <script src="src/animatedLetters.js"></script>
     <script src="src/contact.js"></script>
