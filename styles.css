@@ -353,9 +353,21 @@ form {
 input,
 textarea {
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: var(--body-color);
   font-size: 1rem;
   padding: 0.5rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--navbar-color2);
 }
 
 .input-error {
