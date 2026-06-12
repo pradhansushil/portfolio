@@ -555,8 +555,8 @@ footer > * {
   .skills {
     flex-direction: row;
   }
-}
 
-form {
-  max-width: 40vw;
+  form {
+    max-width: 40vw;
+  }
 }
