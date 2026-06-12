@@ -556,3 +556,7 @@ footer > * {
     flex-direction: row;
   }
 }
+
+form {
+  max-width: 40vw;
+}
