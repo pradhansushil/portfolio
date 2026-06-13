@@ -34,7 +34,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .section-separator {
@@ -181,7 +181,7 @@ header {
 
 .blog-btn {
   display: inline-block;
-  padding: 0.45rem 0.85rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   border: 2px solid var(--navbar-color2);
   border-radius: 8px;
@@ -200,7 +200,7 @@ header {
 #welcome-section,
 #skills {
   max-width: var(--max-width);
-  margin: 3rem auto 0;
+  margin: 2rem auto 0;
   padding: 0 1rem;
 }
 
@@ -248,7 +248,7 @@ header {
   border-radius: 999px;
   color: var(--body-color);
   font-size: 0.875rem;
-  padding: 0.3rem 0.85rem;
+  padding: 0.5rem 1rem;
   transition:
     background 0.2s ease,
     border-color 0.2s ease;
@@ -395,7 +395,7 @@ textarea:focus {
   border: none;
   border-radius: 0;
 
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   margin: 2rem auto;
   max-width: var(--max-width);
   text-align: center;
@@ -447,6 +447,10 @@ footer > * {
     scroll-padding-top: 75px;
   }
 
+  header {
+    margin-bottom: 2.5rem;
+  }
+
   .section-separator {
     max-width: 600px;
     margin: 2.5rem auto;
@@ -454,6 +458,7 @@ footer > * {
 
   #welcome-section,
   #skills {
+    margin-top: 2.5rem;
     padding: 0 2rem;
   }
 
@@ -498,8 +503,13 @@ footer > * {
 
 /* ============ DESKTOP ============ */
 @media (min-width: 1024px) {
+  header {
+    margin-bottom: 3rem;
+  }
+
   #welcome-section,
   #skills {
+    margin-top: 3rem;
     padding: 0 1rem;
   }
 
